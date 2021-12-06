@@ -32,10 +32,10 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/app-backend-school:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.REPOSITORY }}:latest
 
       - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+        run: echo ${{ steps.docker_build.outputs.digest }} 
 
   deploy:
     
