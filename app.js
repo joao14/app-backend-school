@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', (req, res) => {
-    res.send('Hello World Alex Merino v1.2');
+    res.send('Hello World Alex Merino v1.4');
 })
 
 app.get('/students', (req, res) => {
