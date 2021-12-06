@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
     res.send('App backend school 1.0');
 })
 
+app.get('/app/v1/materias', (req, res) => {
+    res.send('App backend materias v1.0');
+})
+
 app.use('/app/v1/user/', userRoutes)
 
 
