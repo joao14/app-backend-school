@@ -2,6 +2,7 @@ require('dotenv').config();
 var express = require('express');
 var app = express();
 app.use(express.json());
+const PORT = process.env.PORT || 3000
 
 //Importer routes
 var userRoutes = require('./routes/user.routes')
@@ -19,6 +20,6 @@ app.use('/app/v1/user/', userRoutes)
 
 
 
-app.listen(process.env.PORT || 3000, function() {
-    console.log('Example app listening on port 3000');
+app.listen(PORT, function() {
+    console.log('Server running on port 3000...');
 })
