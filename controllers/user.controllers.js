@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-require('dotenv').config()
+
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const pool = require('../config/db')
@@ -42,7 +42,6 @@ const getUsers = async(req, res) => {
     } catch (err) {
         console.log(err.message);
     }
-
 }
 
 module.exports = {
