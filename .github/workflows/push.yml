@@ -3,8 +3,6 @@ name: Nodejs CI - APP backend school
 on: 
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs: 
   build:
@@ -41,9 +39,11 @@ jobs:
     
     name: Deploy to Heroku
     runs-on: ubuntu-latest
-    steps: 
+    steps:
+
       - name: Check out repository
         uses: actions/checkout@v2
+
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
