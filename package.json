@@ -11,8 +11,11 @@
         "type": "git",
         "url": "git+https://github.com/joao14/app-backend-school.git"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "development",
+        "heroku"
+    ],
+    "author": "alex-merino",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/joao14/app-backend-school/issues"
