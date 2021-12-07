@@ -4,21 +4,6 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const pool = require('../config/db')
 
-const getMe = async(req, res) => {
-    const userId = req.user.userId
-    const user = await User.findById(userId)
-    if (user) {
-        res.status(200).json({
-            message: "Found",
-            user,
-        })
-    } else {
-        res.status(400).json({
-            message: "Bad request"
-        })
-    }
-}
-
 const add = async(req, res) => {
 
     const { user_name, user_lastname, user_age, user_email, user_phone, user_identification } = req.body;
