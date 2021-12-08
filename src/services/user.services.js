@@ -4,7 +4,7 @@ const pool = require('../config/db')
 const createusers = async(user, content) => {
 
     try {
-        return await pool.query('INSERT INTO scho_user (user_name, user_lastname, user_age, user_email, user_phone, user_identification, user_username, user_password) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [user.user_name, user.user_lastname, user.user_age, user.user_email, user.user_phone, user.user_identification, user.user_username, user.user_password])
+        return await pool.query('INSERT INTO scho_user (user_name, user_lastname, user_age, user_email, user_phone, user_identification, user_username, user_password, prof_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)', [user.user_name, user.user_lastname, user.user_age, user.user_email, user.user_phone, user.user_identification, user.user_username, user.user_password, user.prof_id])
 
     } catch (e) {
         throw new Error(e.message)

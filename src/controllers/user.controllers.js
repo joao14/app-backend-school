@@ -32,7 +32,7 @@ const add = async(req, res, next) => {
 
     try {
 
-        const { user_name, user_lastname, user_age, user_email, user_phone, user_identification, user_username, user_password } = req.body;
+        const { user_name, user_lastname, user_age, user_email, user_phone, user_identification, user_username, user_password, prof_id } = req.body;
 
 
         let user = {
@@ -43,7 +43,8 @@ const add = async(req, res, next) => {
             user_phone: user_phone,
             user_identification: user_identification,
             user_username: user_username,
-            user_password: user_password
+            user_password: user_password,
+            prof_id: prof_id
         }
 
         await createusers(user)
