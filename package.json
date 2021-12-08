@@ -1,13 +1,13 @@
 {
     "name": "app-backend-school",
     "version": "1.0.0",
-    "description": "Application frontend in angular",
+    "description": "Application backend in angular",
     "main": "app.js",
     "engines": {
         "node": "16.x"
     },
     "scripts": {
-        "start": "node app.js"
+        "start": "node app"
     },
     "repository": {
         "type": "git",

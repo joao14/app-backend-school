@@ -46,9 +46,6 @@ const add = async(req, res, next) => {
             user_password: user_password
         }
 
-        console.log("Este es el usuario");
-        console.log(user);
-
         await createusers(user)
 
         res.status(201).send(`User added with ID: ${user.user_identification}`)
