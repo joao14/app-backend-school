@@ -1,10 +1,10 @@
 const jwt = require("jsonwebtoken");
 
-module.exports = function(req, res, next) {
+const validate = function(req, res, next) {
     const token = req.header("auth-token");
     if (!token) return res.status(400).send("Access Denied!, no token entered");
     try {
-        const verified = jwt.verify(token, process.env.jwtSecret);
+        const verified = jwt.verify(token, process.env.JWTSECRET);
         req.user = verified;
         next();
     } catch (err) {
@@ -13,3 +13,7 @@ module.exports = function(req, res, next) {
         });
     }
 };
+
+module.exports = {
+    validate
+}

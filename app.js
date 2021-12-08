@@ -4,8 +4,8 @@ var app = express();
 app.use(express.json());
 const PORT = process.env.PORT || 3000
 
-//Importer routes
-var userRoutes = require('./routes/user.routes')
+//Import routes 
+var userRoutes = require('./src/routes/user.routes')
 
 
 app.get('/', (req, res) => {
