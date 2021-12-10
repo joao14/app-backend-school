@@ -18,7 +18,7 @@ const userLogin = async(req, res, next) => {
         const user = await getuserbycredentials(credentials)
 
         if (user.rows.length > 0) {
-            res.status(200).json({ "message": "Successful Login", "token": generateJWT(user.rows[0]) })
+            res.status(200).json({ "message": "Successful Login DBACCCESS", "token": generateJWT(user.rows[0]) })
         } else {
             res.status(400).json({ "message": "Incorrect login" })
         }
